@@ -1,0 +1,85 @@
+{
+  "n_rows": 10000,
+  "train_rows": 8000,
+  "test_rows": 2000,
+  "baseline": {
+    "linear_regression": {
+      "rmse": 8332958933.191194,
+      "mae": 2725732598.1762843,
+      "r2": 0.7566692672308174
+    },
+    "random_forest": {
+      "rmse": 7619548181.919031,
+      "mae": 2557216292.3708916,
+      "r2": 0.796550362582061
+    },
+    "gradient_boosting": {
+      "rmse": 7728147931.044999,
+      "mae": 2860633829.2250695,
+      "r2": 0.7907095873416912
+    }
+  },
+  "tuned": {
+    "linear_regression": {
+      "rmse": 8332958933.191194,
+      "mae": 2725732598.1762843,
+      "r2": 0.7566692672308174
+    },
+    "random_forest": {
+      "rmse": 8859439117.720812,
+      "mae": 2830864791.046901,
+      "r2": 0.7249504511560805
+    },
+    "gradient_boosting": {
+      "rmse": 6514465607.962665,
+      "mae": 2435424716.163124,
+      "r2": 0.851284555954188
+    }
+  },
+  "best_params": {
+    "linear_regression": {},
+    "random_forest": {
+      "model__n_estimators": 200,
+      "model__min_samples_split": 5,
+      "model__min_samples_leaf": 1,
+      "model__max_features": "sqrt",
+      "model__max_depth": null
+    },
+    "gradient_boosting": {
+      "model__subsample": 0.85,
+      "model__n_estimators": 400,
+      "model__min_samples_leaf": 1,
+      "model__max_depth": 6,
+      "model__loss": "huber",
+      "model__learning_rate": 0.05
+    }
+  },
+  "cv_log_rmse": {
+    "random_forest": 0.41857744578813944,
+    "gradient_boosting": 0.3967265798446985
+  },
+  "winner": "gradient_boosting",
+  "runner_up": "linear_regression",
+  "rmse_gap": 1818493325.228529,
+  "note": "gradient_boosting lebih baik berdasarkan test RMSE",
+  "features": {
+    "numeric": [
+      "bed_rooms",
+      "bath_rooms",
+      "carport",
+      "land_area",
+      "building_area",
+      "total_rooms",
+      "bath_per_bed",
+      "building_to_land_ratio",
+      "room_density",
+      "land_per_room",
+      "log_land_area",
+      "log_building_area"
+    ],
+    "categorical": [
+      "district",
+      "city"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# RF binary 60+ MB masing-masing -> regenerate via train.py
+outputs/models/random_forest_*.joblib

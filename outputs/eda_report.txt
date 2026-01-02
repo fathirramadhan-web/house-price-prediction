@@ -1,0 +1,72 @@
+EDA — Jakarta House Price Dataset
+Raw shape: (10000, 9) | Clean shape: (10000, 15)
+Rows removed: 0
+
+Missing values after type coercion (0 room counts -> NaN, before imputation):
+bed_rooms        198
+bath_rooms       198
+carport            0
+land_area          3
+building_area      5
+
+Target 'price' describe (Rupiah):
+count    1.000000e+04
+mean     1.004029e+10
+std      2.004519e+10
+min      1.850000e+06
+25%      2.500000e+09
+50%      4.500000e+09
+75%      9.800000e+09
+max      9.000000e+11
+
+Numeric feature describe:
+         bed_rooms   bath_rooms       carport     land_area  building_area
+count  9802.000000  9802.000000  10000.000000   9997.000000    9995.000000
+mean      4.339421     3.592430      1.578900    296.610183     319.962481
+std       3.149892     2.885333      1.743467    502.921686     357.676034
+min       1.000000     1.000000      0.000000      1.000000       1.000000
+25%       3.000000     2.000000      1.000000    100.000000     139.000000
+50%       4.000000     3.000000      1.000000    177.000000     230.000000
+75%       5.000000     4.000000      2.000000    335.000000     400.000000
+max      63.000000    63.000000     31.000000  17714.000000   15331.000000
+
+top districts by count / median price:
+                     count        median
+district                                
+Kelapa Gading          435  4.000000e+09
+Pondok Indah           393  1.750000e+10
+Pantai Indah Kapuk     364  1.050000e+10
+Tebet                  341  5.900000e+09
+Kebayoran Baru         340  2.490000e+10
+Sunter                 340  4.500000e+09
+Citra Garden           255  2.700000e+09
+Jagakarsa              242  2.500000e+09
+Cilandak               233  8.000000e+09
+Kemang                 228  1.695000e+10
+Lebak Bulus            217  6.450000e+09
+Jakarta Garden City    195  2.150000e+09
+Rawamangun             191  3.500000e+09
+Jelambar               182  3.050000e+09
+Duri Kepa              179  2.800000e+09
+Tanjung Duren          169  2.650000e+09
+Green Lake City        167  2.800000e+09
+Menteng                162  4.350000e+10
+Cipete                 161  1.150000e+10
+Cibubur                152  1.550000e+09
+
+cities by count / median price:
+                 count        median
+city                                
+Jakarta Selatan   3379  8.800000e+09
+Jakarta Barat     2622  3.200000e+09
+Jakarta Utara     1739  5.450000e+09
+Jakarta Timur     1690  2.450000e+09
+Jakarta Pusat      570  6.900000e+09
+
+Correlation with price (numeric):
+price            1.000000
+land_area        0.698065
+building_area    0.625742
+carport          0.333620
+bath_rooms       0.212372
+bed_rooms        0.183969
